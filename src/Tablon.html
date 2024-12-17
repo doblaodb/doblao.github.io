@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablón Web</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Doblao</h1>
+    </header>
+    
+    <!-- Mobile Menu Toggle -->
+    <div id="menu-toggle">&#9776; Menú</div>
+    
+    <!-- Navigation Menu -->
+    <nav id="mobile-menu">
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="Tablon.html">Tablón de Anuncios</a></li>
+            <li>
+                <a href="Noticias.html">Noticias</a>
+            </li>
+            <li><a href="Inventario.html">Inventario</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        <section id="tablones" class="section">
+            <h2>Tablón de Anuncios</h2>
+            <p>Aquí podrás encontrar anuncios importantes.</p>
+        </section>
+        
+        <section id="gallery" class="gallery">
+            <h2>Noche Buena</h2>
+            <p>En Noche Buena todo el mundo a DINO.</p>
+                    <a href="https://open.nyxell.com/city/discotecas-villanuevadelaserena/site/discoteca-dinosaurio-villanueva-de-la-serena/event/19698-nochebuena-2024-" download><img src="/img/dino.jpg" ></a>
+        </section>
+        <section id="gallery" class="gallery">
+            <h2>Cumpleaños</h2>
+            <p>Cumpleaños de Pablo 21 de Diciembre en el doblao.</p>
+                    <img src="/img/pablo.jpg"></a>
+        </section>
+        <section id="gallery" class="gallery">
+            <h2>Cumpleaños</h2>
+            <p>Cumpleaños de Jimena 11 de Enero en su campo.</p>
+                    <img src="/img/fiesta-cumpleanos_98.jpg"></a>
+        </section>
+    </section>
+    <section id="gallery" class="gallery">
+        <h2>Viaje Dobladil</h2>
+        <p>El día 20 de Diciembre, algunos integrantes del Doblao irán a pasar la noche en las frías y peligrosas calles de Badajoz, una experiencia única gracias a nuestra tarjeta SATE y nuestros santos Cojones.</p>
+                <img src="/img/geek-vagabundo.jpg"></a>
+    </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Doblao. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

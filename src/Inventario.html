@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablón Web</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Doblao</h1>
+    </header>
+    
+    <!-- Mobile Menu Toggle -->
+    <div id="menu-toggle">&#9776; Menú</div>
+    
+    <!-- Navigation Menu -->
+    <nav id="mobile-menu">
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="Tablon.html">Tablón de Anuncios</a></li>
+            <li>
+                <a href="Noticias.html">Noticias</a>
+            </li>
+            <li><a href="Inventario.html">Inventario</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="gallery" class="gallery">
+            <h2>Inventario</h2>
+            <p>Este apartado es para pedir productos, por ejemplo, cuando alguien va a pasar por el chino, poder pedir algo siempre que se disponga del dinero necesario.</p>
+            <img src="/img/manuleborracho.jpg" ></a>
+        </section>
+    <div class="container">
+        <h1>Solicitudes de Productos</h1>
+        <div class="request-form">
+            <input type="text" id="product-name" placeholder="Nombre del producto">
+            <textarea id="product-description" placeholder="Descripción"></textarea>
+            <input type="number" id="product-quantity" placeholder="Cantidad">
+            <input type="text" id="product-location" placeholder="Ubicación (opcional)">
+            <button id="add-request">Añadir solicitud</button>
+        </div>
+        <ul class="product-list" id="product-list">
+            <!-- Las solicitudes aparecerán aquí -->
+        </ul>
+    </div>
+</main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Doblao. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+                const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+        document.getElementById('add-request').addEventListener('click', function() {
+            var productName = document.getElementById('product-name').value;
+            var productDescription = document.getElementById('product-description').value;
+            var productQuantity = document.getElementById('product-quantity').value;
+            var productLocation = document.getElementById('product-location').value;
+
+            if (productName && productQuantity) {
+                var listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <strong>${productName}</strong> - ${productDescription} (Cantidad: ${productQuantity})
+                    <button onclick="removeRequest(this)">Eliminar</button>
+                `;
+                document.getElementById('product-list').appendChild(listItem);
+
+                // Limpiar los campos después de añadir la solicitud
+                document.getElementById('product-name').value = '';
+                document.getElementById('product-quantity').value = '';
+                document.getElementById('product-location').value = '';
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        });
+
+        function removeRequest(button) {
+            var li = button.parentElement;
+            li.remove();
+        }
+    </script>
+</body>
+</html>

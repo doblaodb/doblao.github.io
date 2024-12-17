@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablón Web</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Doblao</h1>
+    </header>
+    
+    <!-- Mobile Menu Toggle -->
+    <div id="menu-toggle">&#9776; Menú</div>
+    
+    <!-- Navigation Menu -->
+    <nav id="mobile-menu">
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="Tablon.html">Tablón de Anuncios</a></li>
+            <li>
+                <a href="Noticias.html">Noticias</a>
+            </li>
+            <li><a href="Inventario.html">Inventario</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        <section id="tablones" class="section">
+            <h2>Noticiero Dobladil</h2>
+            <p>Con este noticiero nos informaremos de todo lo que pasa dentro y fuera del doblao.</p>
+        </section>
+        
+        <section id="gallery" class="gallery">
+            <h2>Pelea Khorbi vs Vinisiu</h2>
+            <p>El pasado Lunes 16 de diciembre, la Guadis avistó una pelea de mano del riguroso Khorbi contra Vinisiu Llunior</p>
+                    <img src="/img/khabib.jpg" ></a>
+            </section>
+            <section id="gallery" class="gallery">
+                <h2>Amanda Bloquea a Pollete</h2>
+                <p>El pasado Viernes 13 de Diciembre Amanda bloqueó a Pollete en un ataque de rabia ya que Pollete le respondió algo seco, tras la alegación a nombre de "Marica" refiriendose a Pollete.</p>
+                        <img src="/img/pollete.jpg" ></a>
+                </section>
+
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Doblao. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
